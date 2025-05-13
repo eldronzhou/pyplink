@@ -1,5 +1,5 @@
 # pyplink
-Self-contained python C interface to read plink bed files.
+Self-contained python C interface to read the genotypes from plink bed files into the matrix format.
 
 Usage:
 
@@ -10,6 +10,7 @@ Define the function as below:
 ```
 import ctypes
 import numpy as np
+import pandas as pd
 
 # Define the function 
 plink_reader.read_bed_file.argtypes = [
