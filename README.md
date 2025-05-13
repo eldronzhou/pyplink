@@ -65,7 +65,7 @@ fam = pd.read_csv("XXX.fam", sep="\t", header=None)
 num_fam = len(fam) # number of samples in fam
 bim = pd.read_csv("XXX.bim", sep="\t", header=None)
 sample_indices = [x for x in range(num_fam)] # sample indices
-snp_indices = [x for x in range(num_snps)] # SNP indices
+snp_indices = [x for x in range(len(bim))] # SNP indices
 num_snps = len(snp_indices)
 filename = "XXX.bed"
 genotype_matrix = read_bed_file(filename, num_fam, num_snps, snp_indices, sample_indices)
